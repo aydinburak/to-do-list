@@ -1,0 +1,14 @@
+.specialDiv{
+  border: 1px solid #c9c9c9;
+  border-radius: 10px; 
+  background-color: #3d3d3d;
+  height: 600px;
+  width: 800px;
+  text-align: center;
+  }
+
+  h2 {
+    margin: 8px 0;
+    text-align: center;
+    margin-top: 50px;
+  }

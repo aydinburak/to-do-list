@@ -1,0 +1,362 @@
+#left_empty {
+  float:left; 
+  width:25%;
+}
+
+#mid_box {
+  float:left; 
+  width:50%;
+}
+
+#right_empty {
+  float:right;
+  width:25%;
+}
+
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #008a77;    /* Color of text in main page */
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* This effects first box in main screen */
+.content {
+  display: flex;
+  margin: 20px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This effects the button box */
+.card svg.material-icons path {
+  fill: rgb(255, 255, 255);
+}
+
+/* This effects the button box */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+  color: #00ff2a;
+}
+
+/* This effects all the boxes in screen */
+.card {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #505050;
+  height: 400px;
+  width: 800px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+/* This effects the button box */  
+.card.card-small {
+  height: 16px;
+  width: 168px;
+}
+
+.card-container .card:not(.highlight-card) {
+  cursor: pointer;
+}
+
+/* This effects card container and button */
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+/* This effects To-do list box */
+.card.highlight-card {
+  background-color: #505050;
+  color: #ff00b3;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  position: relative;
+}
+
+/* This effects Card container */
+a,
+a:visited,
+a:hover {
+  color: rgb(255, 242, 0);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* This effects Card container */
+a:hover {
+  color: #00ff77;
+}
+
+.feather {
+width: 16px;
+height: 16px;
+vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  /* rtl:raw:
+  right: 0;
+  */
+  bottom: 0;
+  /* rtl:remove */
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgb(255, 0, 0);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: rgb(0, 255, 242);
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+body {
+  background-color: #8f4df8;
+  font-size: .875rem;
+
+}
+
+.main-todo-input {
+  background: #fff;
+  padding: 0 120px 0 0;
+  border-radius: 1px;
+  margin-top: 200px;
+  box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.3)
+}
+
+.fl-wrap {
+  float: left;
+  width: 100%;
+  position: relative
+}
+
+.main-todo-input:before {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  width: 50px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.41);
+  left: 50%;
+  margin-left: -25px
+}
+
+.main-todo-input-item {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #eee;
+  height: 50px;
+  position: relative
+}
+
+.main-todo-input-item input:first-child {
+  border-radius: 100%
+}
+
+.main-todo-input-item input {
+  float: left;
+  border: none;
+  width: 100%;
+  height: 50px;
+  padding-left: 20px
+}
+
+.main-search-button {
+  background: #4DB7FE
+}
+
+.main-search-button {
+  position: absolute;
+  right: 0px;
+  height: 50px;
+  width: 120px;
+  color: #fff;
+  top: 0;
+  border: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  cursor: pointer
+}
+
+.main-todo-input-wrap {
+  max-width: 500px;
+  margin: 20px auto;
+  position: relative
+}
+
+:focus {
+  outline: 0
+}
+
+@media only screen and (max-width: 768px) {
+  .main-todo-input {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 14px 20px 10px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.0)
+  }
+
+  .main-todo-input-item {
+      width: 100%;
+      border: 1px solid #eee;
+      height: 50px;
+      border: none;
+      margin-bottom: 10px
+  }
+
+  .main-todo-input-item input {
+      border-radius: 6px !important;
+      background: #fff
+  }
+
+  .main-search-button {
+      position: relative;
+      float: left;
+      width: 100%;
+      border-radius: 6px
+  }
+}
+
+.remove {
+  float: right;
+  color: #757575 !important;
+  font-size: 14px
+}
+
+#list-items {
+  padding-left: 20px;
+  padding-top: 15px
+}
+
+ul {
+  padding: 0;
+  text-align: left;
+  list-style: none
+}
+
+.todo-text {
+  color: #757575;
+  margin-left: 10px
+}
+
+.strike {
+  color: blue
+}
+
+.todo-listing {
+  padding: 0px 29px 0 0;
+  margin-top: 54px !important
+}
+
