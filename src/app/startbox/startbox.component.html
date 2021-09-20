@@ -1,32 +1,138 @@
-<div id="specialDiv">
+<div class="specialDiv">
   <h2>What are you going to do today ?</h2>
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="What would you like to do today ?" 
-    aria-describedby="basic-addon2">
+    <div>
+      <form>
+        <input type="text" class="someInputStyle" placeholder="What would you like to do today ?"
+          aria-describedby="basic-addon2">
+        <button class="btn someCancelStyle">Cancel</button>
+      </form>
+    </div>
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button">TO-DO</button>
+      <button class="btn btn-outline-secondary someStyle" type="button"><b>Add Task</b></button>
     </div>
   </div>
-  <div class="list-group">
-    <label class="list-group-item">
+  <div class="row d-flex justify-content-center container">
+    <div class="card-hover-shadow-2x mb-3 card">
+      <div class="scroll-area-sm">
+        <div style="position: static;" class="ps ps--active-y">
+          <div class="ps-content">
+            <ul class=" list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="todo-indicator bg-warning"></div>
+                <div class="widget-content p-0">
+                  <div class="widget-content-wrapper">
+                    <div class="widget-content-left mr-2">
+                      <div class="custom-checkbox custom-control"> <input class="custom-control-input"
+                          id="exampleCustomCheckbox12" type="checkbox"><label class="custom-control-label"
+                          for="exampleCustomCheckbox12">&nbsp;</label> </div>
+                    </div>
+                    <div class="widget-content-left">
+                      <div class="widget-heading">Call Sam For payments <div class="badge badge-danger ml-2">Rejected
+                        </div>
+                      </div>
+                      <div class="widget-subheading"><i>By Bob</i></div>
+                    </div>
+                    <div class="widget-content-right"> <button class="border-0 btn-transition btn btn-outline-success">
+                        <i class="fa fa-check"></i></button> <button
+                        class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i> </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="todo-indicator bg-focus"></div>
+                <div class="widget-content p-0">
+                  <div class="widget-content-wrapper">
+                    <div class="widget-content-left mr-2">
+                      <div class="custom-checkbox custom-control"><input class="custom-control-input"
+                          id="exampleCustomCheckbox1" type="checkbox"><label class="custom-control-label"
+                          for="exampleCustomCheckbox1">&nbsp;</label></div>
+                    </div>
+                    <div class="widget-content-left">
+                      <div class="widget-heading">Make payment to Bluedart</div>
+                      <div class="widget-subheading">
+                        <div>By Johnny <div class="badge badge-pill badge-info ml-2">NEW</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="widget-content-right"> <button class="border-0 btn-transition btn btn-outline-success">
+                        <i class="fa fa-check"></i></button> <button
+                        class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i> </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="todo-indicator bg-primary"></div>
+                <div class="widget-content p-0">
+                  <div class="widget-content-wrapper">
+                    <div class="widget-content-left mr-2">
+                      <div class="custom-checkbox custom-control"><input class="custom-control-input"
+                          id="exampleCustomCheckbox4" type="checkbox"><label class="custom-control-label"
+                          for="exampleCustomCheckbox4">&nbsp;</label></div>
+                    </div>
+                    <div class="widget-content-left flex2">
+                      <div class="widget-heading">Office rent </div>
+                      <div class="widget-subheading">By Samino!</div>
+                    </div>
+                    <div class="widget-content-right"> <button class="border-0 btn-transition btn btn-outline-success">
+                        <i class="fa fa-check"></i></button> <button
+                        class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i> </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="todo-indicator bg-info"></div>
+                <div class="widget-content p-0">
+                  <div class="widget-content-wrapper">
+                    <div class="widget-content-left mr-2">
+                      <div class="custom-checkbox custom-control"><input class="custom-control-input"
+                          id="exampleCustomCheckbox2" type="checkbox"><label class="custom-control-label"
+                          for="exampleCustomCheckbox2">&nbsp;</label></div>
+                    </div>
+                    <div class="widget-content-left">
+                      <div class="widget-heading">Office grocery shopping</div>
+                      <div class="widget-subheading">By Tida</div>
+                    </div>
+                    <div class="widget-content-right"> <button class="border-0 btn-transition btn btn-outline-success">
+                        <i class="fa fa-check"></i></button> <button
+                        class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i> </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="d-block text-right card-footer">
+        <button class="mr-2 btn btn-link btn-sm">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="list-group">
+    <label class="list-group-item checkboxColor">
       <input class="form-check-input me-1" type="checkbox" value="">
       First checkbox
     </label>
-    <label class="list-group-item">
+    <label class="list-group-item checkboxColor">
       <input class="form-check-input me-1" type="checkbox" value="">
       Second checkbox
+      <input class="buttonAlignment" type="image" src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" />
     </label>
-    <label class="list-group-item">
+    <label class="list-group-item checkboxColor">
       <input class="form-check-input me-1" type="checkbox" value="">
       Third checkbox
     </label>
-    <label class="list-group-item">
+    <label class="list-group-item checkboxColor">
       <input class="form-check-input me-1" type="checkbox" value="">
       Fourth checkbox
     </label>
-    <label class="list-group-item">
+    <label class="list-group-item checkboxColor">
       <input class="form-check-input me-1" type="checkbox" value="">
       Fifth checkbox
     </label>
-  </div>
+  </div> -->
 </div>

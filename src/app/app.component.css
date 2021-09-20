@@ -11,6 +11,12 @@
 #right_empty {
   float:right;
   width:25%;
+  background-color: #3d3d3d;
+  height: 834px;
+}
+
+.allBg{
+  background-color: #3d3d3d;
 }
 
 :host {
